@@ -1,0 +1,7 @@
+list = []
+
+userInput = input("Put your numbers with space between each number: ")
+revisedInput = userInput.split()
+list.append(revisedInput)
+
+print(list)
