@@ -17,6 +17,7 @@ def start():
 
 # now for basic stat function
 def calc():
+    global myMed
     mySum = sum(myList)
     myAvg = mySum / len(myList)
 
