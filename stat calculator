@@ -12,20 +12,24 @@ myList.sort()
 
 
 
-mtf = input("What would you like to do now? ")
-doing()
+
+
 
 def doing():
+    mtf = input("What would you like to do now? ")
     if mtf == "add":
         addMore = input('add more then: ')
         revisedAdded = addMore.split()
         myList.append(revisedAdded)
         myList.sort()
         print(myList)
-        doing()
+
     elif mtf == "delete":
         deleteFun = input("what would you like to delete? ")
         myList.pop(deleteFun)
     elif mtf == "search":
         search = input("search for that keyword: ")
         searchResult = myList.index(search)
+
+doing()
+doing()
