@@ -20,8 +20,8 @@ def calc():
     myAvg = mySum / len(myList)
 
     if (len(myList) % 2) == 1:
-        medianNumber = (len(myList) / 2) + 1
-        myMed = int(myList[medianNumber])
+        medianNumber = int((len(myList) / 2) + 1)
+        myMed = myList[medianNumber]
 
     print("Sum:", mySum)
     print("Average:", myAvg)
