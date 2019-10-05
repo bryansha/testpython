@@ -7,6 +7,7 @@ userInput = input("Put your numbers with space between each number: ")
 
 # split up the number, then change them from str to int and sort them
 def start():
+    global myList
     revisedInput = userInput.split()
     myList = list(map(int, revisedInput))
     myList.sort()
@@ -31,7 +32,9 @@ def calc():
 def doing():
     mtf = input("What would you like to do now? ")
     if mtf == "add":
-        userInput = int(input('add more then: '))
+        global userInput
+        userInput = input('add more then: ')
+        start()
         calc()
 
     elif mtf == "delete":
