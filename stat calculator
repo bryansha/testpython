@@ -9,10 +9,8 @@ print(list)
 
 mtf = input("What would you like to do now? ")
 
-
-
 if mtf == "add":
-    addMore = input("add more then: ")
+    addMore = input('add more then: ')
     revisedAdded = addMore.split()
     list.append(revisedAdded)
     list.sort()
