@@ -34,8 +34,9 @@ def doing():
         deleteFun = int(input("what would you like to delete? "))
         myList.pop(deleteFun)
     elif mtf == "search":
-        search = input("search for that keyword: ")
+        search = int(input("search for that keyword: "))
         searchResult = myList.index(search)
+        print(search, "is at", searchResult)
 
 
 doing()
