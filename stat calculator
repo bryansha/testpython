@@ -11,10 +11,6 @@ myList.append(revisedInput)
 myList.sort()
 
 
-
-
-
-
 def doing():
     mtf = input("What would you like to do now? ")
     if mtf == "add":
@@ -30,6 +26,7 @@ def doing():
     elif mtf == "search":
         search = input("search for that keyword: ")
         searchResult = myList.index(search)
+
 
 doing()
 doing()
