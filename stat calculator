@@ -4,4 +4,17 @@ userInput = input("Put your numbers with space between each number: ")
 revisedInput = userInput.split()
 list.append(revisedInput)
 
+
 print(list)
+
+mean = sum(list) / len(list)
+
+print(mean)
+
+if mtf == "add":
+    addMore = input("add more then: ")
+    revisedAdded = addMore.split()
+    list.append(revisedAdded)
+elif mtf == "delete":
+    deleteFun = input("what would you like to delete? ")
+    
