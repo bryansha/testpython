@@ -1,12 +1,16 @@
 myList = []
 
 userInput = input("Put your numbers with space between each number: ")
+print(userInput)
 revisedInput = userInput.split()
+revisedInput.sort()
+print(revisedInput)
 revisedInput = list(map(int, revisedInput))
+print(revisedInput)
 myList.append(revisedInput)
 myList.sort()
 
-print(myList)
+
 
 mtf = input("What would you like to do now? ")
 doing()
