@@ -1,35 +1,49 @@
+# Created empty list for start
 myList = []
 
+# input number here
 userInput = input("Put your numbers with space between each number: ")
-print(userInput)
+
+# split up the number, then change them from str to int and sort them
 revisedInput = userInput.split()
-revisedInput.sort()
-print(revisedInput)
-revisedInput = list(map(int, revisedInput))
-print(revisedInput)
-myList.append(revisedInput)
+myList = list(map(int, revisedInput))
 myList.sort()
 
+# put the number into the list
 
+print(myList)
 
-
+# now for basic stat function
+mySum = sum(myList)
+myAvg = mySum / len(myList)
+print("Sum:", mySum)
+print("Average:", myAvg)
 
 
 def doing():
     mtf = input("What would you like to do now? ")
     if mtf == "add":
-        addMore = input('add more then: ')
+        addMore = int(input('add more then: '))
         revisedAdded = addMore.split()
         myList.append(revisedAdded)
         myList.sort()
         print(myList)
+        doagain()
 
     elif mtf == "delete":
-        deleteFun = input("what would you like to delete? ")
+        deleteFun = int(input("what would you like to delete? "))
         myList.pop(deleteFun)
     elif mtf == "search":
-        search = input("search for that keyword: ")
+        search = int(input("search for that keyword: "))
         searchResult = myList.index(search)
+        print(search, "is at", searchResult)
+
+
+def again():
+    muff = input()
+    if muff == "":
+        doing()
+
 
 doing()
-doing()
+again()
