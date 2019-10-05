@@ -9,16 +9,15 @@ revisedInput = userInput.split()
 revisedInput = list(map(int, revisedInput))
 revisedInput.sort()
 
-
-print(revisedInput)
+# put the number into the list
 myList.append(revisedInput)
-myList.sort()
+print(myList)
 
 
 def doing():
     mtf = input("What would you like to do now? ")
     if mtf == "add":
-        addMore = input('add more then: ')
+        addMore = int(input('add more then: '))
         revisedAdded = addMore.split()
         myList.append(revisedAdded)
         myList.sort()
@@ -32,5 +31,4 @@ def doing():
         searchResult = myList.index(search)
 
 
-doing()
 doing()
