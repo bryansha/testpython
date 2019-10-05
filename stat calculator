@@ -3,18 +3,23 @@ list = []
 userInput = input("Put your numbers with space between each number: ")
 revisedInput = userInput.split()
 list.append(revisedInput)
-
+list.sort()
 
 print(list)
 
-mean = sum(list) / len(list)
+mtf = input("What would you like to do now? ")
 
-print(mean)
+
 
 if mtf == "add":
     addMore = input("add more then: ")
     revisedAdded = addMore.split()
     list.append(revisedAdded)
+    list.sort()
+    print(list)
 elif mtf == "delete":
     deleteFun = input("what would you like to delete? ")
-    
+    list.pop(deleteFun)
+elif mtf == "search":
+    search = input("search for that keyword: ")
+    searchResult = list.index(search)
