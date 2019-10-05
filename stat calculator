@@ -13,11 +13,19 @@ myList.sort()
 
 print(myList)
 
+
 # now for basic stat function
-mySum = sum(myList)
-myAvg = mySum / len(myList)
-print("Sum:", mySum)
-print("Average:", myAvg)
+def calc():
+    mySum = sum(myList)
+    myAvg = mySum / len(myList)
+
+    if (len(myList) % 2) == 1:
+        medianNumber = (len(myList) / 2) + 1
+        myMed = int(myList[medianNumber])
+
+    print("Sum:", mySum)
+    print("Average:", myAvg)
+    print("Median:", myMed)
 
 
 def doing():
@@ -28,7 +36,7 @@ def doing():
         myList.append(revisedAdded)
         myList.sort()
         print(myList)
-        doagain()
+        calc()
 
     elif mtf == "delete":
         deleteFun = int(input("what would you like to delete? "))
@@ -45,5 +53,6 @@ def again():
         doing()
 
 
+calc()
 doing()
 again()
