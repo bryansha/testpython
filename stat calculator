@@ -1,11 +1,15 @@
+# Created empty list for start
 myList = []
 
+# input number here
 userInput = input("Put your numbers with space between each number: ")
-print(userInput)
+
+# split up the number, then change them from str to int and sort them
 revisedInput = userInput.split()
-revisedInput.sort()
-print(revisedInput)
 revisedInput = list(map(int, revisedInput))
+revisedInput.sort()
+
+
 print(revisedInput)
 myList.append(revisedInput)
 myList.sort()
