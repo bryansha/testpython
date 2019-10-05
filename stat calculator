@@ -8,16 +8,19 @@ list.sort()
 print(list)
 
 mtf = input("What would you like to do now? ")
+doing()
 
-if mtf == "add":
-    addMore = input('add more then: ')
-    revisedAdded = addMore.split()
-    list.append(revisedAdded)
-    list.sort()
-    print(list)
-elif mtf == "delete":
-    deleteFun = input("what would you like to delete? ")
-    list.pop(deleteFun)
-elif mtf == "search":
-    search = input("search for that keyword: ")
-    searchResult = list.index(search)
+def doing():
+    if mtf == "add":
+        addMore = input('add more then: ')
+        revisedAdded = addMore.split()
+        list.append(revisedAdded)
+        list.sort()
+        print(list)
+        doing()
+    elif mtf == "delete":
+        deleteFun = input("what would you like to delete? ")
+        list.pop(deleteFun)
+    elif mtf == "search":
+        search = input("search for that keyword: ")
+        searchResult = list.index(search)
