@@ -14,7 +14,11 @@ myList.sort()
 print(myList)
 
 # now for basic stat function
-print(sum(myList))
+mySum = sum(myList)
+myAvg = mySum / len(myList)
+print("Sum:", mySum)
+print("Average:", myAvg)
+
 
 def doing():
     mtf = input("What would you like to do now? ")
