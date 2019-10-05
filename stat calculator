@@ -2,16 +2,17 @@
 myList = []
 
 # input number here
-userInput = input("Put your numbers with space between each number: ")
+userInput = int(input("Put your numbers with space between each number: "))
 
 # split up the number, then change them from str to int and sort them
 revisedInput = userInput.split()
-revisedInput = list(map(int, revisedInput))
 revisedInput.sort()
 
 # put the number into the list
 myList.append(revisedInput)
 print(myList)
+
+# now for basic stat function
 
 
 def doing():
