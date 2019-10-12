@@ -4,31 +4,39 @@ myList = []
 # input number here
 userInput = input("Put your numbers with space between each number: ")
 
+
 # split up the number, then change them from str to int and sort them
-revisedInput = userInput.split()
-myList = list(map(int, revisedInput))
-myList.sort()
+def start():
+    global myList
+    revisedInput = userInput.split()
+    myList = list(map(int, revisedInput))
+    myList.sort()
+    print(myList)
+    print(len(myList))
 
-# put the number into the list
-
-print(myList)
 
 # now for basic stat function
-mySum = sum(myList)
-myAvg = mySum / len(myList)
-print("Sum:", mySum)
-print("Average:", myAvg)
+def calc():
+    global myMed
+    mySum = sum(myList)
+    myAvg = mySum / len(myList)
+
+    if (len(myList) % 2) == 1:
+        medianNumber = int(len(myList) / 2)
+        myMed = myList[medianNumber]
+
+    print("Sum:", mySum)
+    print("Average:", myAvg)
+    print("Median:", myMed)
 
 
 def doing():
     mtf = input("What would you like to do now? ")
     if mtf == "add":
-        addMore = int(input('add more then: '))
-        revisedAdded = addMore.split()
-        myList.append(revisedAdded)
-        myList.sort()
-        print(myList)
-        doagain()
+        global userInput
+        userInput = input('add more then: ')
+        start()
+        calc()
 
     elif mtf == "delete":
         deleteFun = int(input("what would you like to delete? "))
@@ -45,5 +53,7 @@ def again():
         doing()
 
 
+start()
+calc()
 doing()
 again()
